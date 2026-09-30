@@ -1,0 +1,129 @@
+#VRML V2.0 utf8 
+
+#stickmanch6
+Group {
+	children [
+	
+	Transform {
+		translation 0.0 0.0 0.0
+		children Shape {
+			appearance DEF skin Appearance {
+				material Material {
+					diffuseColor 0.3 0.11 0.0
+					ambientIntensity 0.26
+					specularColor 0.75 0.33 0.0
+					shininess 0.8
+						   }
+							}
+			geometry Sphere {
+				radius 0.5
+				  	 }
+				 }
+		    }
+
+#body
+	Transform {
+		translation 0.0 -1.5 0.0
+		children Shape {
+			appearance USE skin
+		geometry Cylinder {
+			radius 0.05 
+			height 2.0
+				   }
+				}
+		    }
+#right arm
+	Transform {
+		translation -0.395 -1.0 0.0
+		rotation 0.0 0.0 1.0 5.00
+		children DEF arm Shape {
+			appearance USE skin
+		geometry Cylinder {
+			radius 0.05
+			height 0.89
+				   }
+				}
+		   }
+#left arm
+	Transform {
+		translation 0.395 -1.0 0.0
+		rotation 0.0 0.0 1.0 -5.00
+		children USE arm
+		   }
+#right leg
+	Transform {
+		translation -0.34 -2.90 0.0
+		rotation 0.0 0.0 1.0 5.64
+		children DEF leg Shape {
+			appearance USE skin
+		geometry Cylinder {
+			radius 0.05 
+			height 1.25
+				   }
+					}
+		    }
+#otherleg
+	Transform {	
+		translation 0.34 -2.90 0.0
+		rotation 0.0 0.0 1.0 -5.64
+		children USE leg
+		   }
+#tophat
+	Transform {
+		translation 0.0 0.75 0.0
+		children Shape {
+			appearance DEF black Appearance {
+				material Material {
+					diffuseColor 0.3 0.3 0.5
+					ambientIntensity 0.3
+					shininess 0.1
+					specularColor 0.7 0.7 0.8
+						    }
+							  }
+		geometry Cylinder {
+			height 1.2
+			radius 0.5
+				   }
+		  		 }
+		    }
+#brim
+	Transform {
+		translation 0.0 0.15 0.0
+		children Shape {
+			appearance USE black
+		geometry Cylinder {
+			height 0.07
+			radius 0.85
+				   }
+				}
+		    }
+#hand
+	Transform {
+		translation 0.95 -1.18 0.0
+		children DEF hand Shape {
+			appearance USE skin
+		geometry Sphere {
+			radius 0.15
+				 }
+					  }
+		    }
+#lefthand
+	Transform {
+		translation -0.95 -1.18 0.0
+		children USE hand
+		   }
+#right foot
+	Transform {
+		translation -0.75 -3.45 0.0
+		scale 1.0 1.0 2.0
+		children USE hand
+		   }
+#left foot
+	Transform {
+		translation 0.75 -3.45 0.0
+		scale 1.0 1.0 2.0
+		children USE hand
+		   }
+
+]
+}                                                                                               

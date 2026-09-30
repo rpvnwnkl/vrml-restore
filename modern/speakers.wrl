@@ -1,0 +1,73 @@
+#VRML V2.0 utf8
+#speakers
+Group {
+	children [
+#right speaker
+	Transform {
+		children Shape {
+			appearance DEF taupe Appearance {
+				material Material {
+					diffuseColor 1.0 0.9725490196078431 0.8627450980392157
+						   }
+							 }
+			geometry Box {
+				size 0.5 0.8 0.6
+				      }
+				}
+		   }
+#gray metal thing
+	Transform {
+		translation 0.0 0.0 0.3
+		scale 1.0 1.0 0.4
+		children Shape {
+			appearance DEF gray Appearance {
+				material Material {
+					diffuseColor 0.5 0.5 0.5
+						    }
+							}
+			geometry Cylinder {
+				height 0.65
+				radius 0.2
+					   }
+				}
+		   }
+#left speaker
+	Transform {
+		translation -4.2 0.0 0.0
+		children Shape {
+			appearance USE taupe
+			geometry Box {
+				size 0.5 0.8 0.6
+				      }
+				}
+		   }
+#gray metal thing
+	Transform {
+		translation -4.2 0.0 0.3
+		scale 1.0 1.0 0.4
+		children Shape {
+			appearance USE gray
+			geometry Cylinder {
+				height 0.65
+				radius 0.2
+					   }
+				}
+		   }
+#sound emitter
+	Sound {
+		source DEF source AudioClip {
+			url "island.wav"
+			loop FALSE
+				  	     }
+			minFront 10.0
+			minBack 5.0
+			maxFront 20.0
+			maxBack 10.0
+		}
+#sensor
+	DEF touch TouchSensor { }
+		
+]
+}
+
+ROUTE touch.touchTime TO source.set_startTime

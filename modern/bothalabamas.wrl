@@ -1,0 +1,106 @@
+#VRML V2.0 utf8
+Group {
+	children [
+#monitor
+	Transform {
+		translation 1.5 -0.45 0.0
+		#scale 2.0 2.0 2.0
+		children Inline {
+	
+			url "alabama1.wrl"
+				}
+		  }
+#computer tower
+	Transform {
+		translation -3.5 -0.2 -1.5
+	#	scale 2.0 2.0 2.0
+		children Inline {
+		
+			url "alabama.wrl"
+	        	  	   }
+		    }
+#speakers
+	Transform {
+		translation 3.55 -1.7 0.0
+		#scale 2.0 2.0 2.0
+		children Inline {
+	
+			url "speakers.wrl"
+				}
+		  }
+#keyboard
+	Transform {
+		translation 1.5 -2.0 1.51
+		#scale 2.0 2.0 2.0
+		children Inline {
+	
+			url "keyboard.wrl"
+				}
+		  }
+#big part of table
+	Transform {
+		translation 0.0 -2.2 0.0
+		children Shape {
+			appearance DEF brown Appearance {
+				material Material {
+					diffuseColor 0.5450980392156862 0.27058823529411763 0.07450980392156862
+						   }
+						}
+			geometry Box {
+				size 10.0 0.25 8.0
+				      }
+				}
+		    }
+#small part of table below
+	Transform {
+		translation 0.0 -2.55 0.0
+		children Shape {
+			appearance USE brown
+			geometry Box {
+				size 8.5 0.45 6.75
+				      }
+				}
+		    }
+#front left leg
+	Transform {
+		translation -3.8 -4.8 3.0
+		children Shape {	
+			appearance USE brown
+			geometry Box {
+				size 0.5 4.0 0.5
+					}
+				}
+		    }
+#front right leg
+	Transform {
+		translation 3.8 -4.8 3.0
+		children Shape {	
+			appearance USE brown
+			geometry Box {
+				size 0.5 4.0 0.5
+					}
+				}
+		    }
+#rear left leg
+	Transform {
+		translation -3.8 -4.8 -3.0
+		children Shape {	
+			appearance USE brown
+			geometry Box {
+				size 0.5 4.0 0.5
+					}
+				}
+		    }
+#rear right leg
+	Transform {
+		translation 3.8 -4.8 -3.0
+		children Shape {	
+			appearance USE brown
+			geometry Box {
+				size 0.5 4.0 0.5
+					}
+				}
+		    }
+		
+]
+}

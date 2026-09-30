@@ -1,0 +1,467 @@
+#VRML V2.0 utf8
+
+Background {
+	skyColor [
+		0.0 0.2 0.7
+		0.0 0.5 1.0
+		1.0 1.0 1.0
+		  ]
+	skyAngle [ 1.309, 1.571 ]
+	groundColor [
+		0.1 0.10 0.0
+		0.4 0.25 0.2
+		0.6 0.60 0.6
+		     ]
+	groundAngle [ 1.309, 1.571 ]
+}
+ 
+
+#Mcdonalds
+
+
+
+Group {
+	children [
+
+Transform {
+  	translation 0.0 -4.5 -19.0
+	children Shape {
+	appearance Appearance {
+		material Material {
+			diffuseColor 0.25 0.25 0.25
+				   }
+				}
+	geometry Box {
+		size 25.0 0.01 25.0
+		      }
+			}
+	}
+	
+	Transform {
+		translation 0.0 0.0 -19.0
+	children Shape {
+		appearance DEF mcdc Appearance {
+			material Material {
+				diffuseColor 0.0 0.0 1.0
+					   }
+				texture ImageTexture {
+					url "image3.jpg"
+					
+						      }
+				
+			
+						}
+		geometry Box {
+			size 18.0 12.0 15.0
+			      }
+			 }
+		   }
+
+
+
+
+#roof
+	Transform {
+		translation 0.0 8.0 -14.0
+		rotation 1.0 0.0 0.0 0.45465
+	children Shape {
+		appearance DEF roof Appearance {
+			material Material {
+				diffuseColor 0.0 1.0 0.0
+					   }
+			texture ImageTexture {
+				url "shingles.jpg"
+					      }
+			
+						}
+		geometry Box {
+			size 21.0 0.23 4.0
+
+			      }
+			}
+		     }
+Transform {
+		translation 0.0 8.0 -24.0
+		rotation 1.0 0.0 0.0 -0.45465
+	children Shape {
+		appearance USE roof
+		geometry Box {
+			size 21.0 0.23 4.0
+
+			      }
+			}
+		     }
+#edge of roof
+Transform {
+	translation 0.0 7.1 -11.75
+	children Shape {
+		appearance DEF lilroof Appearance {
+			texture ImageTexture {
+				url "lilshingles.jpg"
+					      }
+						   }
+	geometry Box {
+		size 21.0 0.23 2.0
+		      }
+			}
+	   }
+#edge of roof
+Transform {
+	translation 0.0 7.1 -26.25
+	children Shape {
+		appearance USE lilroof
+			
+	geometry Box {
+		size 21.0 0.23 2.0
+		      }
+			}
+	   }
+#top of roof
+Transform {
+	translation 0.0 9.0 -19.0
+	children Shape {
+		appearance USE roof
+	geometry Box {
+		size 21.0 0.23 6.75
+		      }
+			}
+	   }
+
+
+
+#stay out of this hizzo b
+
+#underneath roof
+	Transform {
+		translation 0.0 7.5 -14.5
+		rotation 1.0 0.0 0.0 0.45465
+	children Shape {
+		appearance DEF rof Appearance {
+			material Material {
+				diffuseColor 0.0 1.0 0.0
+					   }
+			texture ImageTexture {
+				url "wood003.jpg"
+				       		}
+			
+						}
+		geometry Box {
+			size 20.0 1.0 4.5
+
+			      }
+			}
+		     }
+#ohter underneath roof
+Transform {
+		translation 0.0 7.5 -23.5
+		rotation 1.0 0.0 0.0 -0.45465
+	children Shape {
+		appearance USE rof
+		geometry Box {
+			size 20.0 1.0 4.5
+
+			      }
+			}
+		     }
+#under edge of roof
+Transform {
+	translation 0.0 6.6 -12.2
+	children Shape {
+		appearance USE rof
+	geometry Box {
+		size 20.0 1.0 2.0
+		      }
+			}
+	   }
+#under edge of roof
+Transform {
+	translation 0.0 6.6 -25.8
+	children Shape {
+		appearance USE rof
+			
+	geometry Box {
+		size 20.0 1.0 2.0
+		      }
+			}
+	   }
+#under top of roof
+Transform {
+	translation 0.0 8.5 -19.0
+	children Shape {
+		appearance USE rof
+	geometry Box {
+		size 20.0 1.0 6.0
+		      }
+			}
+	   }
+
+#that thing between the box and the roof
+Transform {
+	translation 0.0 5.5 -19.0
+	children Shape {
+		appearance DEF brick1 Appearance {
+		material Material {
+			diffuseColor 1.0 0.0 0.0
+				   }
+		texture ImageTexture {
+			url "brick1.jpg"
+				      }
+
+				       }
+	geometry Box {
+		size 17.85 3.0 14.85
+		      }
+			}
+	   }
+		
+Transform {
+	translation 0.0 7.74 -19.0
+	children Shape {
+		appearance DEF brick2 Appearance {
+		material Material {
+			diffuseColor 1.0 0.0 0.0
+				   }
+		texture ImageTexture {
+			url "brick2.jpg"
+				      }
+						   }
+		      
+	geometry Box {
+		size 17.85 1.5 8.5
+		      }
+			}
+	   }
+
+#entrance
+Transform {
+	translation 0.0 -1.25 -9.5
+	children Shape {
+		appearance Appearance {
+			material Material {
+				diffuseColor 1.0 0.0 0.0
+					   }
+			texture ImageTexture {
+				url "smallbrickish.jpg"
+					      }
+				       }
+	geometry Box {
+		size 8.0 6.5 4.0
+		      }
+			}
+	   }
+#roof for it
+Transform {
+	translation 0.0 4.1 -9.5
+	rotation 1.0 0.0 0.0 0.175
+	center 0.0 3.35 -9.5
+	children Shape {
+		appearance Appearance {
+			material Material {
+				diffuseColor 0.0 1.0 0.0
+					   }
+			texture ImageTexture {
+				url "shingleish.jpg"
+					      }
+					}
+	geometry Box {
+		size 9.0 0.2 6.7
+		      }
+			}
+	    }
+#the door
+Transform {
+	translation 0.0 -1.75 -7.58
+	children Shape {
+		appearance Appearance {
+			material Material {
+				diffuseColor 0.2 0.2 0.71
+				
+				shininess 0.5
+				ambientIntensity 0.4
+				transparency 0.3
+					   }
+				       }
+	geometry Box {
+		size 6.0 5.5 0.25
+		      }
+	  		}
+	    }
+#the behind door
+Transform {
+	translation 0.0 -1.6 -7.58
+	children Shape {
+		appearance Appearance {
+			material Material {
+				diffuseColor 0.8 0.8 0.8
+				
+				shininess 0.5
+				ambientIntensity 0.4
+				transparency 0.2
+					   }
+				       }
+	geometry Box {
+		size 6.0 5.5 0.25
+		      }
+	  		}
+	    }
+
+#things beside the door
+Transform {
+	translation -2.95 -1.75 -7.5
+	children Shape {
+		appearance DEF lightgray Appearance {
+			material Material {
+				diffuseColor 0.5 0.5 0.55
+				ambientIntensity 0.3
+				
+				shininess 0.4
+				
+					   }
+					}
+	geometry Box {
+		size 0.45 5.7 0.27
+		      }
+			}
+	    }
+
+
+
+#thing on the right side of the door
+
+Transform {
+	translation 2.95 -1.75 -7.5
+	children Shape {
+		appearance USE lightgray
+	geometry Box {
+		size 0.45 5.7 0.27
+		      }
+			}
+	    }
+#gray thing on top of door
+Transform {
+	translation 0.0 1.0 -7.5
+	children Shape {
+		appearance USE lightgray
+	geometry Box {
+		size 6.35 0.45 0.27
+		      }
+			}
+	    }
+
+#gray thing on bottom of door
+Transform {
+	translation 0.0 -4.55 -7.5
+	children Shape {
+		appearance USE lightgray
+	geometry Box {
+		size 6.35 0.45 0.27
+		      }
+			}
+	   }
+
+
+#thing in the middle of the door
+Transform {
+	translation 0.0 -1.75 -7.5
+	children Shape {
+		appearance USE lightgray
+	geometry Box {
+		size 0.45 5.5 0.27
+		      }
+			}
+	    }
+#random lines?
+Transform {
+	translation -2.95 -1.75 -7.48
+	children Shape {
+		appearance DEF black Appearance {
+			material Material {
+				diffuseColor 0.0 0.0 0.0
+					   }
+						 }
+	geometry Box {
+		size 0.05 5.5 0.275
+		      }
+			}
+	    }
+
+
+#random lines?
+Transform {
+	translation 2.95 -1.75 -7.48
+	children Shape {
+		appearance USE black
+	geometry Box {
+		size 0.05 5.5 0.275
+		      }
+			}
+	    }
+#black  thing on top of door
+Transform {
+	translation 0.0 1.0 -7.5
+	children Shape {
+		appearance USE black
+	geometry Box {
+		size 5.95 0.05 0.275
+		      }
+			}
+	    }
+#black thing in the middle of the door
+Transform {
+	translation 0.0 -1.75 -7.5
+	children Shape {
+		appearance USE black
+	geometry Box {
+		size 0.05 5.5 0.275
+		      }
+			}
+	    }
+
+#handles
+Transform {
+	translation 0.0 -1.75 -7.5
+	children Shape {
+		appearance USE lightgray
+	geometry Box {
+		size 6.35 0.225 0.27
+		      }
+			}
+	    }
+
+#handle on bar handle
+Transform {
+	translation -2.95 -1.75 -6.85
+	center -0.0 -1.75 -7.5
+	rotation 0.0 1.0 0.0 0.349
+	
+	children Shape {
+		appearance Appearance {
+			material Material {
+				diffuseColor 0.68 0.68 0.68
+					   }
+					}
+	geometry Box {
+		size 0.5 1.25 0.1
+		      }
+			}
+	    }
+#handle on bar handle
+Transform {
+	translation 2.95 -1.75 -6.85
+	center -0.0 -1.75 -7.5
+	rotation 0.0 1.0 0.0 -0.349
+	
+	children Shape {
+		appearance Appearance {
+			material Material {
+				diffuseColor 0.68 0.68 0.68
+					   }
+					}
+	geometry Box {
+		size 0.5 1.25 0.1
+		      }
+			}
+	    }
+ 
+]
+}

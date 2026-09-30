@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>VRML Archive</title>
+  <style>
+    body {
+      margin: 40px;
+      font: 16px/1.5 system-ui, sans-serif;
+      background: #111;
+      color: #eee;
+    }
+    a { color: #8ab4ff; }
+    li { margin: .45em 0; }
+  </style>
+</head>
+<body>
+  <h1>VRML Archive</h1>
+  <p>Original VRML works, circa 2002–03.</p>
+  <ul id="scenes"></ul>
+
+  <script>
+    const scenes = [
+      "bothalabamas.wrl",
+      "alabama1.wrl",
+      "alabama.wrl",
+      "speakers.wrl",
+      "keyboard.wrl",
+      "computer.wrl",
+      "teacher.wrl",
+      "teacher1.wrl",
+      "movingbox.wrl",
+      "ball.wrl",
+      "stick.wrl",
+      "stickman.wrl",
+      "jeepmove.wrl",
+      "jeepmove1.wrl",
+      "jeepmove11.wrl",
+      "mcdonald.wrl"
+    ];
+
+    document.querySelector("#scenes").innerHTML = scenes.map(scene =>
+      `<li><a href="viewer.html?scene=${encodeURIComponent(scene)}">${scene}</a></li>`
+    ).join("");
+  </script>
+</body>
+</html>
