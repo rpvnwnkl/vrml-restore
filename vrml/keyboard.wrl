@@ -1,0 +1,50 @@
+#VRML V2.0 utf8
+#keyboard
+Group {
+	children [
+#top part
+	Transform {
+		rotation 1.0 0.0 0.0 0.135
+		children Shape {
+			appearance Appearance {
+				material Material {
+					diffuseColor 1.0 0.9725490196078431 0.8627450980392157
+						   }
+					       }
+			geometry Box {
+				size 3.0 0.15 1.35
+				      }
+				}
+		    }
+#top part picture
+	Transform {
+		rotation 1.0 0.0 0.0 0.135
+		translation 0.0 0.075 0.0
+		children Shape {
+			appearance Appearance {
+				texture ImageTexture {
+					url "key3.jpg"
+						   }
+					       }
+			geometry Box {
+				size 3.0 0.05 1.35
+				      }
+				}
+		    }
+#underneath
+Transform {
+		translation 0.0 -0.0845 0.0
+		#rotation 1.0 0.0 0.0 -0.065
+		children Shape {
+			appearance Appearance {
+				material Material {
+					diffuseColor 1.0 0.9725490196078431 0.8627450980392157
+						   }
+					       }
+			geometry Box {
+				size 2.95 0.15 1.275
+				      }
+				}
+		    }
+]
+}

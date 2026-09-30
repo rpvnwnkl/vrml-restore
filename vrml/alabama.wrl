@@ -1,0 +1,713 @@
+#VRML V2.0 utf8
+#computer big part thing
+Group {
+	children [
+	#computer thinker
+	Transform {
+		
+		children Shape {
+			appearance DEF taupe Appearance {
+				material Material {
+					diffuseColor 1.0 0.9725490196078431 0.8627450980392157
+					ambientIntensity 0.0
+					shininess 0.0
+					
+						   }
+							 }
+			geometry Box {
+				size 1.8 3.75 3.0
+				      }
+				}
+		   }
+	#grey plate in back of computer
+	Transform {
+		translation 0.0 0.0 -1.5
+		children Shape {
+		appearance DEF medgray Appearance {
+			material Material {
+				diffuseColor 0.3 0.3 0.5
+				ambientIntensity 0.3
+				specularColor 0.7 0.7 0.8
+				shininess 0.1
+					   }
+						    }
+		geometry Box {
+			size 1.5 3.45 0.05
+			      }
+				}
+		    }
+#bars on back, beside plate
+	Transform {
+		translation 0.825 0.0 -1.5
+		children Shape {
+			appearance USE taupe
+		
+			geometry Box {
+				size 0.15 3.75 0.15
+				      }
+				}
+		   }
+#bars on back, leftside one if u can't see the back
+	Transform {
+		translation -0.825 0.0 -1.5
+		children Shape {
+			appearance USE taupe
+		
+			geometry Box {
+				size 0.15 3.75 0.15
+				      }
+				}
+		   }
+#bar on top, back
+	Transform {
+		translation 0.0 1.8 -1.5
+		children Shape {
+			appearance USE taupe
+		geometry Box {
+			size 1.5 0.15 0.15
+			      }
+				}
+		    }
+#bar on bottome, back	
+	Transform {
+		translation 0.0 -1.8 -1.5
+		children Shape {
+			appearance USE taupe
+		geometry Box {
+			size 1.5 0.15 0.15
+			      }
+				}
+		    }
+	
+#bars on front, on the side
+	Transform {
+		translation 0.825 0.0 1.5
+		children Shape {
+			appearance USE taupe
+		
+			geometry Box {
+				size 0.15 3.75 0.15
+				      }
+				}
+		   }
+
+#bars on front, leftside one 
+	Transform {
+		translation -0.825 0.0 1.5
+		children Shape {
+			appearance USE taupe
+		
+			geometry Box {
+				size 0.15 3.75 0.15
+				      }
+				}
+		   }
+#front right side bar
+	Transform {
+		translation 0.0 1.8 1.5
+		children Shape {
+			appearance USE taupe
+		geometry Box {
+			size 1.5 0.15 0.15
+			      }
+				}
+		    }		
+#front big bottome plate
+	Transform {
+		translation 0.0 -0.8625 1.5
+		children Shape {
+			appearance USE taupe
+		geometry Box {
+			size 1.5 2.025 0.15
+			      }
+				}
+		    }
+#plate obove it
+	Transform {
+		translation 0.0 0.0 1.5
+		children Shape {
+			appearance Appearance {
+				material Material {
+					#diffuseColor 0.9333333333333333 0.9333333333333333 0.8196078431372549
+					diffuseColor 0.9333333333333333 0.9333333333333333  0.8784313725490196
+						   }
+						}
+		geometry Box {
+			size 1.5 3.75 0.03
+			      }
+				}
+		    } 
+#empty slot on front, bottome one
+	Transform {
+		translation 0.0 0.375 1.5
+		children Shape {
+			appearance DEF slots Appearance {
+				material Material {
+					#diffuseColor 0.9333333333333333 0.9333333333333333 0.8196078431372549
+					diffuseColor 0.9333333333333333 0.9098039215686274 0.803921568627451
+					#diffuseColor 0.9333333333333333 0.9137254901960784 0.7490196078431373
+						   }
+							  }
+		geometry Box {
+			size 1.0 0.25 0.05
+			      }
+				}
+		    } 
+#empty slot on front, second from bottome one
+	Transform {
+		translation 0.0 0.75 1.5
+		children Shape {
+			appearance USE slots
+		geometry Box {
+			size 1.0 0.25 0.05
+			      }
+				}
+		    }
+
+#floppy drive button, nothing to animate
+	Transform {
+		translation 0.255 1.03 1.52
+		children Shape {
+			appearance DEF gray Appearance {
+				material Material {
+					diffuseColor 0.75 0.75 0.75
+						   }
+							}
+			#appearance USE taupe 
+			#appearance DEF realslots Appearance {
+				#material Material {
+					#diffuseColor 0.9333333333333333 0.9137254901960784 0.7490196078431373
+						#   }
+							#      }
+			
+		geometry Box {
+			size 0.05 0.02 0.055
+			      }
+				}
+		    }
+
+#box around popout cd slot, top box
+	Transform {
+		translation 0.0 1.4 1.5
+		children Shape {
+			appearance USE slots
+		geometry Box {
+			size 1.0 0.25 0.05
+			      }
+				}
+		    }
+#floppy drive box, nothing to animate
+	Transform {
+		translation 0.0 1.1 1.5
+		children Shape {
+			appearance USE slots
+			
+		geometry Box {
+			size 0.6 0.18 0.05
+			      }
+				}
+		    }  
+#floppy drive slot, nothing to animate
+	Transform {
+		translation 0.0 1.1 1.5
+		children Shape {
+			appearance USE taupe 
+			#appearance DEF realslots Appearance {
+				#material Material {
+					#diffuseColor 0.9333333333333333 0.9137254901960784 0.7490196078431373
+						#   }
+							      #}
+			
+		geometry Box {
+			size 0.45 0.08 0.055
+			      }
+				}
+		    }
+]
+}
+
+#cd popout slot
+Group {
+	 children [
+#cd drive slot, will be animated
+	
+	DEF cdslot Transform {
+			children [
+		Transform {
+		translation 0.0 1.4 1.15
+		children Shape {
+			appearance USE taupe 
+			#appearance DEF realslots Appearance {
+				#material Material {
+					#diffuseColor 0.9333333333333333 0.9137254901960784 0.7490196078431373
+						#   }
+							      #}
+			
+		geometry Box {
+			size 0.75 0.11 0.755
+			      }
+				}
+		
+		    }
+#big circle on cd drive slot
+	Transform {
+		translation 0.0 1.431 1.15
+		children Shape {
+			appearance DEF realslots Appearance {
+				material Material {
+					diffuseColor 0.9333333333333333 0.9137254901960784 0.7490196078431373
+						   }
+							      } 
+			geometry Cylinder {
+				height 0.05
+				radius 0.3
+					    }
+				}
+			}
+
+#small  circle on cd drive slot
+	Transform {
+		translation 0.0 1.431 1.15
+		children Shape {
+			appearance DEF black Appearance {
+				material Material {
+					diffuseColor 0.0 0.0 0.0
+						    }
+						} 
+			geometry Cylinder {
+				height 0.055
+				radius 0.14
+					    }
+				}
+			}
+]
+}
+]
+}
+
+
+
+
+Group {
+	children [
+#cd drive button, 
+	DEF cdbut1 Transform {
+		translation 0.446 1.33 1.52
+		children Shape {
+			#appearance USE gray 
+			appearance DEF dgray Appearance {
+				material Material {
+					diffuseColor 0.2 0.2 0.2
+						   }
+							      }
+			
+		geometry Box {
+			size 0.06 0.03 0.055
+			      }
+				}
+		    }
+#clock
+	DEF clock1 TimeSensor {
+		#enabled FALSE
+		cycleInterval 1.0
+		loop FALSE
+				}
+#clock
+	DEF clock2 TimeSensor {
+		#enabled FALSE
+		cycleInterval 1.0
+		loop FALSE
+				}
+#sensor
+	DEF touch1 TouchSensor { }
+
+#path of cd tray
+DEF trayout PositionInterpolator {
+		key [
+			0.0, 1.0
+		     ]
+		keyValue [
+			0.0 0.0 0.0, 0.0 0.0 0.755
+			  ]
+					    }
+#cdbut1 go back
+DEF but1back PositionInterpolator {
+		key [
+			0.0, 1.0
+		     ]
+		keyValue [
+			0.446 1.33 1.52, 0.446 1.33 1.0
+			  ]
+					    }
+#cdbut2 go front
+DEF but2front PositionInterpolator {
+		key [
+			0.0, 1.0
+		     ]
+		keyValue [
+			0.446 1.33 1.0, 0.446 1.33 1.52
+			  ]
+					    }
+]
+}
+Group {
+	children [
+#cd drive button2, off button, 
+	DEF cdbut2 Transform {
+		translation 0.446 1.33 1.0
+		children Shape {
+			appearance USE dgray 
+			#appearance DEF realslots Appearance {
+				#material Material {
+					#diffuseColor 0.9333333333333333 0.9137254901960784 0.7490196078431373
+						#   }
+							#      }
+			
+		geometry Box {
+			size 0.06 0.03 0.055
+			      }
+				}
+		    }
+#clock
+	DEF clock3 TimeSensor {
+		#enabled FALSE
+		cycleInterval 1.0
+		loop FALSE
+				}
+#clock
+	DEF clock4 TimeSensor {
+		#enabled FALSE
+		cycleInterval 1.0
+		loop FALSE
+				}
+#sensor
+	DEF touch2 TouchSensor { }
+
+#path of cd tray
+DEF trayin PositionInterpolator {
+		key [
+			0.0, 1.0
+		     ]
+		keyValue [
+			0.0 0.0 0.755, 0.0 0.0 0.0
+			  ]
+					    }
+#cdbut1 go front
+DEF but1out PositionInterpolator {
+		key [
+			0.0, 1.0
+		     ]
+		keyValue [
+			0.446 1.33 1.0, 0.446 1.33 1.52
+			  ]
+					    }
+#cdbut2 go front
+DEF but2back PositionInterpolator {
+		key [
+			0.0, 1.0
+		     ]
+		keyValue [
+			0.446 1.33 1.52, 0.446 1.33 1.0
+			  ]
+					    }
+]
+}
+
+Group {
+	children [
+	#on and off buttons, on first
+	DEF onbutton Transform {
+		translation 0.0 -0.35 1.55
+		rotation 1.0 0.0 0.0 1.571
+		children Shape {
+			appearance USE gray
+			geometry Cylinder {
+				height 0.15
+				radius 0.05
+					   }
+				}
+		     }
+#clock
+	DEF clock5 TimeSensor {
+		#enabled FALSE
+		cycleInterval 1.0
+		loop FALSE
+				}
+#clock
+	DEF clock6 TimeSensor {
+		#enabled FALSE
+		cycleInterval 7.0
+		loop FALSE
+				}
+#clock
+	DEF clock7 TimeSensor {
+		#enabled FALSE
+		cycleInterval 1.0
+		loop FALSE
+				}
+#clock
+	DEF clock8 TimeSensor {
+		#enabled FALSE
+		cycleInterval 1.0
+		loop FALSE
+				}
+#sensor
+	DEF touch3 TouchSensor { }
+
+# onoff light on 
+	DEF onoffturnon ColorInterpolator {
+		key [ 0.0, 1.0 ]
+
+		keyValue [
+			0.0 0.0 0.0, 0.0 1.0 0.0
+			  ]
+					   }
+# orange blink light on 
+	DEF orangeon  ColorInterpolator {
+		key [ 0.0, 0.025, 0.05, 0.1, 0.125, 0.15, 0.2, 0.225, 0.25, 0.275,  0.5, 0.75, 1.0 ]
+
+		keyValue [
+			0.0 0.0 0.0, 1.0 0.5 0.0, 0.0 0.0 0.0, 
+			1.0 0.5 0.0, 0.0 0.0 0.0, 1.0 0.5 0.0, 
+			0.0 0.0 0.0, 1.0 0.5 0.0, 0.0 0.0 0.0, 
+			1.0 0.5 0.0, 0.0 0.0 0.0, 1.0 0.5 0.0, 
+			0.0 0.0 0.0
+			  ]
+					   }
+# green blink light on 
+	DEF greenon  ColorInterpolator {
+		key [ 0.0, 0.25, 0.5, 0.525, 0.6, 0.625, 0.7,  0.75,  0.8, 0.825 ,  0.85,  0.875, 1.0 ]
+
+		keyValue [
+			0.0 0.0 0.0, 0.0 1.0 0.0, 0.0 0.0 0.0, 
+			0.0 1.0  0.0, 0.0 0.0 0.0, 0.0 1.0 0.0, 
+			0.0 0.0 0.0, 0.0 1.0  0.0, 0.0 0.0 0.0, 
+			0.0 1.0 0.0, 0.0 0.0 0.0, 0.0 1.0  0.0, 
+			0.0 0.0 0.0
+			  ]
+					   }
+#off go front
+DEF offbuttonout PositionInterpolator {
+		key [
+			0.0, 1.0
+		     ]
+		keyValue [
+			0.0 -0.35 1.0, 0.0 -0.35 1.55
+			  ]
+					    }
+#on go back
+DEF onbuttonin PositionInterpolator {
+		key [
+			0.0, 1.0
+		     ]
+		keyValue [
+			0.0 -0.35 1.55, 0.0 -0.35 1.0
+			  ]
+					    }
+]
+}
+Group {
+	children [
+
+#off button
+	DEF offbutton Transform {
+		translation 0.0 -0.35 1.0
+		rotation 1.0 0.0 0.0 1.571
+		children Shape {
+			
+			appearance USE gray
+			geometry Cylinder {
+				height 0.15
+				radius 0.05
+					   }
+				}
+		     }
+#clock
+	DEF clock12 TimeSensor {
+		#enabled FALSE
+		cycleInterval 1.0
+		loop FALSE
+				}
+#clock
+	DEF clock11 TimeSensor {
+		#enabled FALSE
+		cycleInterval 1.0
+		loop FALSE
+				}
+#clock
+	DEF clock10 TimeSensor {
+		#enabled FALSE
+		cycleInterval 1.0
+		loop FALSE
+				}
+#clock
+	DEF clock9 TimeSensor {
+		#enabled FALSE
+		cycleInterval 1.0
+		loop FALSE
+				}
+#sensor
+	DEF touch4 TouchSensor { }
+
+# onoff light on 
+	DEF onoffturnoff ColorInterpolator {
+		key [ 0.0, 1.0 ]
+
+		keyValue [
+			0.0 1.0 0.0, 0.0 0.0 0.0
+			  ]
+					   }
+# orange blink light on 
+	DEF orangeoff  ColorInterpolator {
+		key [ 0.0, 0.025, 0.05, 0.1, 0.125, 0.15, 0.2, 0.225, 0.25, 0.275,  0.5, 0.75, 1.0 ]
+
+		keyValue [
+			0.0 0.0 0.0, 1.0 0.5 0.0, 0.0 0.0 0.0, 
+			1.0 0.5 0.0, 0.0 0.0 0.0, 1.0 0.5 0.0, 
+			0.0 0.0 0.0, 1.0 0.5 0.0, 0.0 0.0 0.0, 
+			1.0 0.5 0.0, 0.0 0.0 0.0, 1.0 0.5 0.0, 
+			0.0 0.0 0.0
+			  ]
+					   }
+# green blink light on 
+	DEF greenoff  ColorInterpolator {
+		key [ 0.0, 0.25, 0.5, 0.525, 0.6, 0.625, 0.7,  0.75,  0.8, 0.825 ,  0.85,  0.875, 1.0 ]
+
+		keyValue [
+			0.0 0.0 0.0, 0.0 1.0 0.0, 0.0 0.0 0.0, 
+			0.0 1.0  0.0, 0.0 0.0 0.0, 0.0 1.0 0.0, 
+			0.0 0.0 0.0, 0.0 1.0  0.0, 0.0 0.0 0.0, 
+			0.0 1.0 0.0, 0.0 0.0 0.0, 0.0 1.0  0.0, 
+			0.0 0.0 0.0
+			  ]
+					   }
+#off go front
+DEF offbuttonin PositionInterpolator {
+		key [
+			0.0, 1.0
+		     ]
+		keyValue [
+			0.0 -0.35 1.55, 0.0 -0.35 1.0
+			  ]
+					    }
+#on go back
+DEF onbuttonout PositionInterpolator {
+		key [
+			0.0, 1.0
+		     ]
+		keyValue [
+			0.0 -0.35 1.0, 0.0 -0.35 1.55
+			  ]
+					    }
+]
+}
+#three light
+Group {
+	children [
+		Transform {
+			translation 0.0 -0.1 1.48
+			rotation 1.0 0.0 0.0 1.571
+			scale 0.5 1.5 1.0 
+			children Shape {
+				appearance Appearance {
+					material DEF onofflight Material {
+						diffuseColor 0.0 0.0 0.0
+							   }
+							}
+				geometry Cylinder {
+					height 0.15
+					radius 0.04
+						   }
+					}
+					 }
+]
+}
+#right side, orange blinking
+Group {
+	children [
+		Transform {
+			translation 0.1 -0.105 1.48
+			rotation 1.0 0.0 0.0 1.571
+			scale 0.5 1.5 1.0 
+			children Shape {
+				appearance Appearance {
+					material DEF orangelight Material {
+						diffuseColor 0.0 0.0 0.0
+							   }
+							}
+				geometry Cylinder {
+					height 0.15
+					radius 0.04
+						   }
+					}
+					 }
+]
+}
+#left side, green blinking
+Group {
+	children [
+		Transform {
+			translation -0.1 -0.105 1.48
+			rotation 1.0 0.0 0.0 1.571
+			scale 0.5 1.5 1.0 
+			children Shape {
+				appearance Appearance {
+					material DEF greenlight Material {
+						diffuseColor 0.0 0.0 0.0
+							   }
+							}
+				geometry Cylinder {
+					height 0.15
+					radius 0.04
+						   }
+					}
+					 }
+]
+}
+
+ROUTE touch1.touchTime TO clock1.set_startTime
+ROUTE touch1.touchTime TO clock2.set_startTime
+ROUTE touch2.touchTime TO clock3.set_startTime
+ROUTE touch2.touchTime TO clock4.set_startTime
+ROUTE clock1.fraction_changed TO trayout.set_fraction
+ROUTE trayout.value_changed TO cdslot.set_translation
+ROUTE clock1.fraction_changed TO but2front.set_fraction
+ROUTE but2front.value_changed TO cdbut2.set_translation
+ROUTE clock2.fraction_changed TO but1back.set_fraction
+ROUTE but1back.value_changed TO cdbut1.set_translation
+ROUTE clock3.fraction_changed TO trayin.set_fraction
+ROUTE trayin.value_changed TO cdslot.set_translation
+ROUTE clock3.fraction_changed TO but2back.set_fraction
+ROUTE but2back.value_changed TO cdbut2.set_translation
+ROUTE clock4.fraction_changed TO but1out.set_fraction
+ROUTE but1out.value_changed TO cdbut1.set_translation
+
+ROUTE touch3.touchTime TO clock5.set_startTime
+ROUTE touch3.touchTime TO clock6.set_startTime
+ROUTE touch3.touchTime TO clock7.set_startTime
+ROUTE touch3.touchTime TO clock8.set_startTime
+ROUTE clock5.fraction_changed TO offbuttonout.set_fraction
+ROUTE offbuttonout.value_changed TO offbutton.set_translation
+ROUTE clock8.fraction_changed TO onbuttonin.set_fraction
+ROUTE onbuttonin.value_changed TO onbutton.set_translation
+ROUTE clock7.fraction_changed TO onoffturnon.set_fraction
+ROUTE onoffturnon.value_changed TO onofflight.set_diffuseColor
+ROUTE clock6.fraction_changed TO greenon.set_fraction
+ROUTE greenon.value_changed TO greenlight.set_diffuseColor
+ROUTE clock6.fraction_changed TO orangeon.set_fraction
+ROUTE orangeon.value_changed TO orangelight.set_diffuseColor
+
+ROUTE touch4.touchTime TO clock9.set_startTime
+ROUTE touch4.touchTime TO clock10.set_startTime
+ROUTE touch4.touchTime TO clock11.set_startTime
+ROUTE touch4.touchTime TO clock12.set_startTime
+ROUTE clock9.fraction_changed TO offbuttonin.set_fraction
+ROUTE offbuttonin.value_changed TO offbutton.set_translation
+ROUTE clock10.fraction_changed TO onbuttonout.set_fraction
+ROUTE onbuttonout.value_changed TO onbutton.set_translation
+ROUTE clock12.fraction_changed TO onoffturnoff.set_fraction
+ROUTE onoffturnoff.value_changed TO onofflight.set_diffuseColor
+ROUTE clock11.fraction_changed TO greenoff.set_fraction
+ROUTE greenoff.value_changed TO greenlight.set_diffuseColor
+ROUTE clock11.fraction_changed TO orangeoff.set_fraction
+ROUTE orangeoff.value_changed TO orangelight.set_diffuseColor

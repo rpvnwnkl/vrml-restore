@@ -1,0 +1,344 @@
+#VRML V2.0 utf8
+#computer
+Group {
+	children [
+	#monitor
+	Transform {
+		rotation 1.0 0.0 0.0 -0.175
+		children Shape {
+			appearance DEF taupe Appearance {
+				material Material {
+					diffuseColor 1.0 0.9725490196078431 0.8627450980392157
+					ambientIntensity 0.0
+					shininess 0.0
+					
+						   }
+							 }
+			geometry Box {
+				size 3.0 2.75 0.75
+				      }
+				}
+		   }
+#second box on monitor
+	Transform {
+		translation 0.0 -0.125 -0.8
+		rotation 1.0 0.0 0.0 -0.175
+		children Shape {
+			appearance USE taupe
+		geometry Box {
+			size 2.75 2.5 0.9
+		              }
+				}
+		   }
+#very back
+	Transform {
+		translation 0.0 -0.225 -1.65
+		rotation 1.0 0.0 0.0 -0.175
+		children Shape {
+			appearance USE taupe
+		geometry Box {
+			size 2.45 2.2 1.7
+			      }
+				}
+		    }
+##closer for three boxes of monitor below
+
+
+#beneath the monitor
+	Transform {
+		translation 0.0 -1.35 -0.8
+		#rotation 0.0 0.0 0.0 0.175
+		children Shape {
+			appearance USE taupe
+		geometry Box {
+			size 2.3 0.5 2.0
+			      }
+				}
+		   }
+
+]
+}
+Group {
+	children [
+#light
+	Transform {
+		translation 0.87 -1.15 0.5
+		rotation 1.0 0.0 0.0 1.571
+		children Shape {
+			appearance Appearance{
+				material DEF monlight Material {
+					diffuseColor 0.0 0.0 0.0
+					
+					  	   }
+					      }
+			geometry Cylinder {
+				height 0.22
+				radius 0.03
+					   }
+				}
+		    }
+
+
+]
+}
+
+#first button and screen on
+Group {
+	children [
+
+		
+		 
+
+#button
+	 DEF presson Transform {
+		translation 1.0 -1.15 0.5
+		rotation 1.0 0.0 0.0 1.571
+		children Shape {
+			appearance Appearance{
+				material Material {
+					diffuseColor 0.75 0.75 0.75
+					  	   }
+					      }
+			geometry Cylinder {
+				height 0.25
+				radius 0.06
+					   }
+				}
+		    }
+#sensor
+	DEF touch1 TouchSensor { }
+#clock
+	DEF clock1 TimeSensor {
+		#enabled FALSE
+		cycleInterval 1.0
+		loop FALSE
+				}
+#clock
+	DEF clock8 TimeSensor {
+		#enabled FALSE
+		cycleInterval 1.0
+		loop FALSE
+				}
+#clock
+	DEF clock3 TimeSensor {
+		#enabled FALSE
+		cycleInterval 1.0
+		loop FALSE
+				}
+#screenandbutton animation for screen on   to go front
+	DEF screenon PositionInterpolator {
+		key [
+			0.0, 1.0
+		     ]
+		keyValue [
+			0.0 0.085 0.30, 0.0 0.085 0.37
+			  ]
+					    }
+#button animation to press button2 b go front
+	 DEF screenofffromonbutton PositionInterpolator {
+		key [
+			0.0, 1.0
+		     ]
+		keyValue [
+			1.0 -1.15 0.0, 1.0 -1.15 0.5
+			  ]
+	
+			    }
+
+#off screen go back when turn on
+	 DEF screenoffbackduringon PositionInterpolator {
+		key [
+			0.0, 1.0
+		     ]
+		keyValue [
+			0.0 0.085 0.36, 0.0 0.085 0.30
+			  ]
+					    }
+#button animation to press button b go back
+	 DEF screenonbutton PositionInterpolator {
+		key [
+			0.0, 1.0
+		     ]
+		keyValue [
+			1.0 -1.15 0.5, 1.0 -1.15 0.0
+			  ]
+					    }
+# light on and off
+	DEF colorlight ColorInterpolator {
+		key [ 0.0, 1.0 ]
+
+		keyValue [
+			0.0 0.0 0.0, 0.0 1.0 0.0
+			  ]
+					   }
+]
+}
+Group {
+	children [
+	#on screen?
+	 DEF onscreen Transform {
+		translation 0.0 0.085 0.3
+		rotation 1.0 0.0 0.0 -0.175
+		children Shape {
+			appearance Appearance {
+				material Material {
+					diffuseColor 0.0 0.0 0.0
+					
+						   }
+				texture ImageTexture {
+					url "island.jpg"
+						      }
+					       }
+			geometry Box {
+				size 2.5 2.25 0.05
+				      }
+				}
+				}
+]
+}
+Group {
+	children [
+#screenoff?
+	DEF offscreen Transform {
+		translation 0.0 0.085 0.36
+		rotation 1.0 0.0 0.0 -0.175
+		children Shape {
+			appearance Appearance {
+				material Material {
+					diffuseColor 0.1 0.1 0.1
+					ambientIntensity 0.3
+					shininess 0.7 
+					specularColor 0.7 0.7 0.8
+					
+						   }
+					       }
+			geometry Box {
+				size 2.5 2.25 0.05
+				      }
+				}
+		    }
+]
+}
+Group {
+	children [
+
+		    
+
+#button anim
+#button #2
+	 DEF pressoff Transform {
+		translation 1.0 -1.15 0.0
+		rotation 1.0 0.0 0.0 1.571
+		children Shape {
+			appearance Appearance {
+				material Material {
+					diffuseColor 0.75 0.75 0.75
+					              }
+					         }
+			geometry Cylinder {
+				height 0.25
+				radius 0.06
+					   }
+				}
+		    }
+
+#sensor
+	DEF touch2 TouchSensor { }
+
+
+#clock
+	DEF clock4 TimeSensor {
+		#enabled FALSE
+		cycleInterval 1.0
+		loop FALSE
+				}
+#clock
+	DEF clock5 TimeSensor {
+		#enabled FALSE
+		cycleInterval 1.0
+		loop FALSE
+				}
+#clock
+	DEF clock7 TimeSensor {
+		#enabled FALSE
+		cycleInterval 1.0
+		loop FALSE
+				}
+#turns black screen front
+	DEF screenoff PositionInterpolator {
+		key [
+			0.0, 1.0
+		     ]
+		keyValue [
+			0.0 0.085 0.30, 0.0 0.085 0.36
+			  ]
+					    }
+# light on and off
+	DEF colorlight2 ColorInterpolator {
+		key [ 0.0, 1.0 ]
+
+		keyValue [
+			0.0 1.0 0.0, 0.0 0.0 0.0
+			  ]
+					   }
+#button one go front
+DEF screenonfromoffbutton PositionInterpolator {
+		key [
+			0.0, 1.0
+		     ]
+		keyValue [
+			1.0 -1.15 0.0, 1.0 -1.15 0.5
+			  ]
+					    }
+	
+#turns on screen back
+	DEF screenongobackduringoff PositionInterpolator {
+		key [
+			0.0, 1.0
+		     ]
+		keyValue [
+			0.0 0.085 0.36, 0.0 0.085 0.30
+			  ]
+					    }
+#button2 animation to press button 2 and have  b#2 go back
+	DEF screenoffbutton PositionInterpolator {
+		key [
+			0.0, 1.0
+		     ]
+		keyValue [
+			1.0 -1.15 0.5, 1.0 -1.15 0.0
+			  ]
+					    }
+	
+]
+}
+
+#307
+ROUTE touch1.touchTime TO clock1.set_startTime
+ROUTE touch1.touchTime TO clock3.set_startTime
+ROUTE touch1.touchTime TO clock7.set_startTime
+ROUTE clock3.fraction_changed TO screenon.set_fraction
+ROUTE screenon.value_changed TO onscreen.set_translation
+ROUTE clock1.fraction_changed TO screenonbutton.set_fraction
+ROUTE screenonbutton.value_changed TO presson.set_translation
+ROUTE clock3.fraction_changed TO screenofffromonbutton.set_fraction
+ROUTE screenofffromonbutton.value_changed TO pressoff.set_translation
+ROUTE clock1.fraction_changed TO screenoffbackduringon.set_fraction
+ROUTE screenoffbackduringon.value_changed TO offscreen.set_translation
+ROUTE clock7.fraction_changed TO colorlight.set_fraction
+ROUTE colorlight.value_changed TO monlight.set_diffuseColor
+
+
+ROUTE touch2.touchTime TO clock5.set_startTime
+ROUTE touch2.touchTime TO clock4.set_startTime
+ROUTE touch2.touchTime TO clock8.set_startTime
+ROUTE clock5.fraction_changed TO screenoff.set_fraction
+ROUTE screenoff.value_changed TO offscreen.set_translation
+ROUTE clock4.fraction_changed TO screenoffbutton.set_fraction
+ROUTE screenoffbutton.value_changed TO pressoff.set_translation
+ROUTE clock5.fraction_changed TO screenonfromoffbutton.set_fraction
+ROUTE screenonfromoffbutton.value_changed TO presson.set_translation
+ROUTE clock4.fraction_changed TO screenongobackduringoff.set_fraction
+ROUTE screenongobackduringoff.value_changed TO onscreen.set_translation
+ROUTE clock8.fraction_changed TO colorlight2.set_fraction
+ROUTE colorlight2.value_changed TO monlight.set_diffuseColor
