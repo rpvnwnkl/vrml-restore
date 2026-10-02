@@ -13,7 +13,6 @@ Group {
 
 	
 
-]
 #clock
 DEF Clock TimeSensor {
 	cycleInterval 10.0
@@ -30,6 +29,7 @@ DEF jeeppath PositionInterpolator {
 		  ]
 				   }
 
+]
 }
 ROUTE Clock.fraction_changed TO jeeppath.set_fraction
 ROUTE jeeppath.value_changed TO Jeep.set_translation

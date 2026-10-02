@@ -51,5 +51,17 @@ Pages compatibility corrections in `modern/` only:
 - `computer.wrl`, `teacher.wrl`, and `teacher1.wrl` reference `Playoffs.jpg`
   with the exact capitalization of the surviving file.
 - `mcdonald.wrl` references `Image3.jpg` with matching capitalization.
-- The scene index omits the missing `jeepmove.wrl` and includes the surviving
+- The scene index omits the missing `jeepmove.wrl` and the comment-only
   `yard.wrl`. These changes do not reconstruct missing historical content.
+
+## Surviving scene syntax
+
+X_ITE validation found two syntax errors in the historical files. Only the
+modern copies are repaired:
+
+- `ball.wrl` ends immediately after `radius 1.0`. Closing delimiters are
+  appended to display the surviving sphere. The rotating/color-changing
+  animation mentioned in its comment is missing and has not been invented.
+- `jeepmove11.wrl` closes its Group children list before its TimeSensor and
+  PositionInterpolator nodes. Move that closing bracket after those nodes,
+  matching the structure of the surviving `jeepmove1.wrl`.

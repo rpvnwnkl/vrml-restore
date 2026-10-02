@@ -12,3 +12,8 @@ Group {
 							}
 				geometry Sphere {
 					radius 1.0
+				}
+			}
+		}
+	]
+}
