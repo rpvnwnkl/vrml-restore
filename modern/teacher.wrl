@@ -163,7 +163,7 @@ Group {
 					ambientIntensity 0.7
 						   }
 				texture ImageTexture {
-					url "playoffs.jpg"
+					url "Playoffs.jpg"
 						      }
 					       }
 			geometry Box {
